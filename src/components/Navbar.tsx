@@ -11,6 +11,11 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
     <div className="fixed top-0 left-0 w-full z-50">
       <div className="bg-black flex justify-between items-center px-3 md:px-10 py-3">
         <div className="flex items-center">
+          <Link to="/">
+            <img src={logo1} alt="Company Logo" className="h-10" />
+          </Link>
+        </div>
+        <div className="flex">
           <button
             onClick={toggle}
             aria-label="Toggle Sidebar"
@@ -18,27 +23,42 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
           >
             <AlignJustify className="w-6 h-6 text-white mr-2" />
           </button>
-          <Link to="/">
-            <img src={logo1} alt="Company Logo" className="h-10" />
-          </Link>
-        </div>
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{ y: [0, -10, 0] }} // Moves up & down
-          transition={{
-            duration: 0.5,
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }} // Infinite bounce
-        >
-          <Link
-            to="/rate"
-            className="text-orange-300 hover:bg-orange-300 hover:py-2 hover:px-4 hover:text-white hover:rounded-full transition-all"
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, -10, 0] }} // Moves up & down
+            transition={{
+              duration: 0.5,
+              repeat: Infinity,
+              repeatType: 'reverse',
+            }}
+            className="hidden md:block"
           >
-            HIRE ME
-          </Link>
-        </motion.div>
+            <Link
+              to="/rate"
+              className="text-orange-300 hover:bg-orange-300 hover:py-2 hover:px-4 hover:text-white hover:rounded-full transition-all"
+            >
+              HIRE ME
+            </Link>
+          </motion.div>
+        </div>
       </div>
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0] }} // Moves up & down
+        transition={{
+          duration: 0.5,
+          repeat: Infinity,
+          repeatType: 'reverse',
+        }}
+        className="absolute top-96 right-5 md:hidden bg-orange-300 py-2 px-4 rounded-full "
+      >
+        <Link
+          to="/rate"
+          className="text-white hover:bg-orange-300 hover:py-2 hover:px-4 hover:text-white hover:rounded-full transition-all"
+        >
+          HIRE ME
+        </Link>
+      </motion.div>
     </div>
   );
 };
