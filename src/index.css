@@ -1,19 +1,22 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100..900&display=swap');
 
-/* Apply Poppins globally */
-body{
+/* Apply Poppins to the body */
+body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: black;
+  color: white; /* Add this if you want white text on a black background */
 }
 
 /* Use Bebas Neue for Headings */
-body h1, body h2, body h3 {
+h1,
+h2,
+h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
 }
+
 /* Active class for highlighting elements */
 .active {
   background-color: #fdba74;
