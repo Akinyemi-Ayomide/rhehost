@@ -6,10 +6,9 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: black;
-  color: white; /* Add this if you want white text on a black background */
+  color: white;
 }
 
-/* Use Bebas Neue for Headings */
 h1,
 h2,
 h3 {
@@ -17,7 +16,6 @@ h3 {
   font-weight: 400;
 }
 
-/* Active class for highlighting elements */
 .active {
   background-color: #fdba74;
 }
