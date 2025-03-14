@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import dataStore from '../Store/dataStore';
 
 import { Link } from 'react-router-dom';
-import { Smile } from 'lucide-react';
+
 import React from 'react';
 
 import { Suspense } from 'react';

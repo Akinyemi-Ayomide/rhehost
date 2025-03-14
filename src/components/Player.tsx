@@ -6,6 +6,8 @@ interface PlayerProps {
   id: number;
   link: string;
   name: string;
+  title:string;
+  position: string;
 }
 
 const Player: React.FC<PlayerProps> = ({ id, link, name, title , position }) => {
