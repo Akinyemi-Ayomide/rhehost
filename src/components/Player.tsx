@@ -8,7 +8,7 @@ interface PlayerProps {
   name: string;
 }
 
-const Player: React.FC<PlayerProps> = ({ id, link, name,title , position }) => {
+const Player: React.FC<PlayerProps> = ({ id, link, name, title , position }) => {
   return (
     <Link to={`/details/${id}`}>
       <div className="rounded-lg overflow-hidden">
