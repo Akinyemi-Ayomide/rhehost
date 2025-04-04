@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import { Home, Mail, Info, StarHalf } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import SideBar from '../components/SideBar';
+import Welcome from '../components/Welcome';
 
 const RootLayout: React.FC = () => {
   const [isSidebarVisible] = useState<boolean>(true);
@@ -25,12 +26,13 @@ const RootLayout: React.FC = () => {
   try {
     return (
       <div>
+        <Welcome />
         <Navbar toggle={toggle} />
         <SideBar visibile={visibile} toggle={toggle} />
         <div className="flex min-h-screen mt-15">
           {/* Conditionally render sidebar */}
           {isSidebarVisible && !shouldHideSidebar && (
-            <nav className="w-52 bg-black hidden md:block  text-white p-6">
+            <nav className="w-52 bg-black fixed right-0 left-0 hidden md:block  text-white p-6">
               <ul className="space-y-3">
                 <li>
                   <NavLink
@@ -73,7 +75,7 @@ const RootLayout: React.FC = () => {
           )}
 
           {/* Main Content */}
-          <div className="flex-1 p-6 text-white  md:max-w-[80%] justify-center mx-auto mt-10">
+          <div className="flex-1   text-white  md:max-w-[80%] justify-center md:mr-10 mx-auto ">
             <Outlet /> {/* This will render the component based on the route */}
           </div>
         </div>
