@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Akinyemi-Ayomide/Rhemation2.git",
+  "homepage": "https://akinyemi-ayomide.github.io/rhehost/",
+
 
   "scripts": {
     "dev": "vite",
